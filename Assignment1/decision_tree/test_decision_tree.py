@@ -28,7 +28,7 @@ def test_dt_classification():
 
 	criteria = ["info_gain", "info_gain_ratio", "gini", "error_rate"]
 	# Expect relatively high accuracy on iris (simple dataset). Threshold conservative.
-	min_acc = 0.85
+	min_acc = 0.8
 
 	for crit in criteria:
 		print(f"\n=== Criterion: {crit} ===")

@@ -60,11 +60,11 @@ class DecisionTreeClassifier(object):
     """
     def __init__(self,
                  criterion="info_gain",
-                 splitter="best",
-                 max_depth=None,
+                 splitter="random",
+                 max_depth=6,
                  max_features=None,
-                 min_samples_split=2,
-                 min_impurity_split=0.0,
+                 min_samples_split=4,
+                 min_impurity_split=0.02,
                  random_state=None):
         self.criterion = criterion
         self.splitter = splitter
@@ -135,7 +135,7 @@ class DecisionTreeClassifier(object):
                 self.tree_depth = curr_depth
             return node(split_score=split_score, value=leaf_val, leaf_num=1)
 
-    def _split(self, X, y, splitter="best"):
+    def _split(self, X, y, splitter="random"):
         """
         Split the node
 
