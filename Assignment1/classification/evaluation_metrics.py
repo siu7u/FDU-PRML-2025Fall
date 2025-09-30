@@ -46,8 +46,13 @@ def precision_score(y_true, y_pred):
 
 def recall_score(y_true, y_pred):
     """Recall = TP / (TP + FN)"""
-    tp, _, fn, _ = _binary_counts(y_true, y_pred)
+    tp, fp, fn,tn = _binary_counts(y_true, y_pred)
     # =============== TODO (students) ===============
+    print(f"tp: {tp}")
+    print(f"fp: {fp}")
+    print(f"fn: {fn}")
+    print(f"tn: {tn}")
+
     return tp / (tp + fn + EPS)
     # ===============================================
     # raise NotImplementedError("Implement recall_score")

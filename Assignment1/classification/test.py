@@ -4,8 +4,8 @@ import evaluation_metrics as eval        # precision / recall / f1
 from datetime import datetime
 
 # ============== 学生信息（请填写） ==============
-STUDENT_NAME = "蔡子恒"   # 例如：张三
-STUDENT_ID   = "23307130002"   # 例如：2025123456
+STUDENT_NAME = "张三"   # 例如：张三
+STUDENT_ID   = "2025123456"   # 例如：2025123456
 # ==============================================
 
 def test_basic():
