@@ -138,14 +138,16 @@ def __info_gain_ratio(y, l_y, r_y):
 
 
 def _gini(labels):
-    """辅助函数：计算一个节点的基尼指数"""
-    n = sum(labels.values())
+    n = 0
+    for key in labels:
+        n += labels[key]
+
     if n == 0:
         return 0
 
     gi = 1.0
-    for count in labels.values():
-        p = count / n
+    for key in labels:
+        p = labels[key] / n
         gi -= p ** 2
     return gi
 
@@ -187,7 +189,10 @@ def __gini_index(y, l_y, r_y):
     return before - after
 
 def _err(label):
-    n = sum(label.values())
+    n = 0
+    for key in label:
+        n += label[key]
+
     if n == 0:
         return 0
 
