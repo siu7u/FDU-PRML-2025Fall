@@ -48,10 +48,6 @@ def recall_score(y_true, y_pred):
     """Recall = TP / (TP + FN)"""
     tp, fp, fn,tn = _binary_counts(y_true, y_pred)
     # =============== TODO (students) ===============
-    print(f"tp: {tp}")
-    print(f"fp: {fp}")
-    print(f"fn: {fn}")
-    print(f"tn: {tn}")
 
     return tp / (tp + fn + EPS)
     # ===============================================
